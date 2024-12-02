@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // 设置编译目标为 ES2020
+    "useDefineForClassFields": true, // 启用类字段的定义
+    "module": "ESNext", // 指定模块系统为 ESNext
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ], // 引入的库文件
+    "skipLibCheck": true, // 跳过库文件的类型检查
+    /* Bundler mode */
+    "moduleResolution": "bundler", // 模块解析策略为 bundler
+    "allowImportingTsExtensions": true, // 允许导入 TypeScript 扩展名的模块
+    "resolveJsonModule": true, // 允许导入 JSON 模块
+    "isolatedModules": true, // 将每个文件作为独立的模块进行编译
+    "noEmit": true, // 不生成输出文件
+    "jsx": "preserve", // 保留 JSX 语法
+    /* Linting */
+    "strict": false, // 关闭严格模式
+    "noUnusedLocals": false, // 允许存在未使用的局部变量
+    "noUnusedParameters": false, // 禁止存在未使用的函数参数
+    "noFallthroughCasesInSwitch": true, // 禁止在 switch 语句中出现 case 穿透
+    /* 路径别名 */
+    "baseUrl": "./", // 解析非相对模块的基地址，默认是当前目录
+    "paths": { // 路径映射，相对于 baseUrl
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts", // 包含所有以 .ts 结尾的文件
+    "src/**/*.d.ts", // 包含所有以 .d.ts 结尾的文件
+    "src/**/*.tsx", // 包含所有以 .tsx 结尾的文件
+    "src/**/*.vue", // 包含所有以 .vue 结尾的文件
+    "src/utils/request.ts", // 包含指定的文件
+    "*.ts" // 包含当前目录下的所有以 .ts 结尾的文件
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json" // 引用其他的 tsconfig.json 文件
+    }
+  ]
+}
